@@ -1,0 +1,3 @@
+body.prod #awsgnav #nav-menubar, body.prod #awsgnav #nav-menubar .nav-menu {
+  background: linear-gradient(rgb(244, 67, 54) 0px, rgb(34, 34, 34) 100%);
+}
