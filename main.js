@@ -4,6 +4,6 @@ chrome.webNavigation.onCompleted.addListener(function(details) {
     });
 }, {
     url: [{
-        hostContains: '.trello.'
+        hostContains: '*'
     }],
 });

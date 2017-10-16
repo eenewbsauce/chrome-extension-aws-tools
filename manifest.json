@@ -1,20 +1,19 @@
 {
   "manifest_version": 2,
-
-  "name": "Trello Clean Mode",
-  "description": "This extension strips down Trello boards to eliminate noise",
+  "name": "AWS Tools",
+  "description": "A suite of tools that add much needed functionality to AWS webapps",
   "version": "1.0",
   "icons": {
     "128": "icon_100.png"
   },
   "background": {
     "persistence": true,
-    "scripts": ["jquery.js", "main.js", "navigation-handler.js", "options.js"]
+    "scripts": ["jquery.js", "main.js", "navigation-handler.js"]
   },
   "content_scripts": [{
     "css": ["main.css"],
     "js": ["jquery.js", "dom.js", "navigation-handler.js"],
-    "matches": ["https://*.trello.com/*"]
+    "matches": ["https://*.aws.amazon.com/dynamodb/*"]
   }],
   "permissions": [
     "storage",
@@ -24,8 +23,6 @@
   ],
   "browser_action": {
     "default_title": "",
-    "default_icon": "icon_100.png",
-    "default_popup": "popup.html"
-  },
-  "version": "1.1"
+    "default_icon": "icon_100.png"
+  }
 }
