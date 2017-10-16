@@ -47,6 +47,6 @@ function killSaveListener() {
 $(document)
 	.on('keydown', function(e) {
 		if (e.keyCode === 13) {
-			searchLoan(openLoan, 3000);
+			searchLoan(searchLoan.bind(null, openLoan));
 		}
 	});
