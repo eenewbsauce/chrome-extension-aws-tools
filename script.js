@@ -85,7 +85,7 @@ window.addEventListener('load', function (evt) {
 
 	function refreshRecord() {
 		closeRecord();
-		setTimeout(openRecord, 200);
+		openRecord();
 	}
 
 	function closeRecord() {

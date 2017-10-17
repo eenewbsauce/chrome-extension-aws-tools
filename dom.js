@@ -7,6 +7,7 @@ s.onload = function() {
 
 
 chrome.runtime.onMessage
-	.addListener(function() {
+	.addListener(function(tabId, msg, cb) {
 		window.postMessage({type: 'refresh'}, '*');
+		cb({ success: true });
 	});
