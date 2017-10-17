@@ -10,8 +10,11 @@ window.addEventListener('load', function (evt) {
 		lastAction: actions.noop
 	}
 
-	// chrome.runtime.onMessage
-	// 	.addListener(refreshHandler);
+	window.addEventListener("message", function(msg) {
+		if (msg.data.type === 'refresh') {
+			refreshHandler();	
+		}
+	});
 
 	//handle enter key for search
 	document.addEventListener('keypress', function (e) {

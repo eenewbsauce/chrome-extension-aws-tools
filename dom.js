@@ -4,3 +4,9 @@ s.onload = function() {
     this.remove();
 };
 (document.head || document.documentElement).appendChild(s);
+
+
+chrome.runtime.onMessage
+	.addListener(function() {
+		window.postMessage({type: 'refresh'}, '*');
+	});
