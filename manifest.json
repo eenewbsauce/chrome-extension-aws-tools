@@ -15,11 +15,12 @@
     "js": ["jquery.js", "dom.js"],
     "matches": ["https://*.aws.amazon.com/dynamodb/*"]
   }],
+  "web_accessible_resources": ["script.js"],
   "permissions": [
     "storage",
     "webNavigation",
     "tabs",
-    "*://*/*"
+    "<all_urls>"
   ],
   "browser_action": {
     "default_title": "",
