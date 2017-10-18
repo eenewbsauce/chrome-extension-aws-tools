@@ -20,9 +20,11 @@ window.addEventListener('load', function (evt) {
 	document.addEventListener('keypress', function (e) {
 	    var key = e.which || e.keyCode;
 
-	    if (key === 13) {
+	    if (key === 13 || key === 0) {
 	    	if (mode.lastAction === actions.noop) {
 				mode.lastAction = actions.query;
+				var keyboardEvent = new KeyboardEvent('keypress');
+			   	document.dispatchEvent(keyboardEvent);				
 	    	} else {
 	    		queryRecord();
 	    	}
