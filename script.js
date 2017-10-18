@@ -24,7 +24,9 @@ window.addEventListener('load', function (evt) {
 	    	if (mode.lastAction === actions.noop) {
 				mode.lastAction = actions.query;
 				var keyboardEvent = new KeyboardEvent('keypress');
-			   	document.dispatchEvent(keyboardEvent);				
+				setTimeout(function() {
+			   		document.dispatchEvent(this);				
+				}.bind(keyboardEvent), 100);
 	    	} else {
 	    		queryRecord();
 	    	}
